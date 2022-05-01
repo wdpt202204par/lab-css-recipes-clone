@@ -1,0 +1,22 @@
+body {
+    font-family: 'Open Sans',
+    sans-serif;
+}
+
+
+h1 {
+text-align: center;
+color: rgb(252, 252, 252);
+position: absolute;
+top: 50%;
+bottom: 50%;
+}
+
+
+img{
+    width: 100%;
+}
+
+article{
+    margin:90px;
+}
