@@ -1,0 +1,116 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+/* GLOBAL RULES ***************************************/
+/* {
+    border:             thin solid black;
+}*/
+
+body {
+    font-family:        Montserrat, Helvetica, sans-serif;
+    font-size:          28px;     
+    font-weight:        300;  
+}
+
+/* Headings */
+h1 {
+    margin:             0;
+    font-size:          110px;
+    font-weight:        400;
+}
+
+h2 {
+    font-size:          32px;
+    font-weight:        400;
+}
+
+/* Generic container to control the display of each "article" */
+.container {
+    display:            flex;
+    flex-direction:     column;         /* Stacking elements vertically */
+    justify-content:    center;
+    align-items:        flex-start;
+    padding:            50px 0;
+    width:              80%;
+    border-bottom:      3px solid gray;
+}
+
+/* HEADER *********************************************/
+#header {
+    /* The "Apple pie" title is centered using "text-align" (horizontal) and "line-height" (vertical).
+     * An alternative flexbox-base alignement is given below the active "#header# rule.
+     */
+    background-image:   url("../images/apple-pie.jpg"); /* Current directory is represented by ".." in CSS (not ".") */
+    background-size:    cover;                          /* The image is cropped at the bottom to fill the block from left to right. */
+    color:              white;
+    height:             100vh;                          /* vh = "viewport height" "100vh" = "100% of vh" ; "viewport" = visible area */
+    text-align:         center;
+    line-height:        100vh;                          /* "line-height" = height of a "line" box (height of h1 characters here) */
+}
+
+/* Alternative centering of "Apple pie" with flexboxes
+#header {
+    display:            flex;
+    height:             100vh;
+    justify-content:    center;
+    align-items:        center;
+    background-image:   url("../images/apple-pie.jpg");
+    background-size:    cover;
+    color:              white;
+} */
+
+/* MAIN ***********************************************/
+
+main {
+    display:            flex;
+    flex-direction:     column;
+    align-items:        center;
+}
+
+    /* INTRODUCTION ***********************************/
+    #introduction {
+        margin-top:         25px;
+        font-size:          32px;
+    }
+
+    #recipe-info{
+        width:              550px;
+        align-self:         center;
+    }
+
+    /* INGREDIENTS ***********************************/
+    #ingredients ul {
+        padding-left:       30px;
+    }
+
+    #ingredients li {
+        list-style-type:    "- ";
+    }
+
+    #cooking-info {
+        margin-top:         50px;
+        width:              520px;
+        align-self:         center;
+    }
+
+    /* DIRECTIONS ***********************************/
+    /*
+    * The <li> element doesn't provide predefined values to display a "1), 2), 3)" list type (number + parenthesis).
+    * The 2 first rules below define a custom list-type using a CSS counter.
+    * Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+    */
+
+    #directions {
+        border-bottom:      none;           /* The generic "container" defines a border-bottom value which is not present in the sample for this section. */
+    }
+
+    #directions ol {
+        padding-left:       17px;
+        counter-reset:      listcount;      /* Creates a new counter named "listitem" (initialized at 0 by default) */
+        list-style-type:    none;
+    }
+
+    #directions li::before {                /* The "::before" pseudo-element prepends a new child to the selected element */
+        counter-increment:  listcount;      /* Increment "liscount" */
+        content:            counter(listcount) ") ";    /* "counter(listcount)" displays the value of the "listcount" counter */
+    }
