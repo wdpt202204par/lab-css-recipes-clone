@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+      
+}
+ 
+header {
+
+    background-image: url(../images/apple-pie.jpg);
+    background-repeat: no-repeat;
+    height: 900px;
+    background-size: 1600px;
+    background-position: center;
+    
+    
+
+}
+
+h1{
+    
+    font-size: 4em;
+    color: white;
+    text-align: center 
+     
+}
+
+p {
+    
+    font-size: 2em;
+    text-align: center;
+    margin: 80px 0px 0px 0;
+}    
+
+.title {
+
+    height: 20em; /* hauteur du parent */
+    line-height: 60em; /* hauteur de ligne (identique) */
+    white-space: nowrap; /* interdiction de passer à la ligne */
+    
+    }
+
+
+.text{
+    font-size: 2em;
+    text-align: center;
+}
+
+.recipe{
+    height: 400px;
+    background-image: url(../images/recipe-info.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+
+
+}
+
+article{
+    font-size: 2em;
+    margin: 10em; 
+    margin-top: 0;
+    
+}
+
+hr{
+    margin-top: auto;
+}
+
+.cooking{
+    height: 300px;
+    background-image: url(../images/cooking-info.png);
+    background-repeat: no-repeat;
+    background-position: center;  
+    
+}
